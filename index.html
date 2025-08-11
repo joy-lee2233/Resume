@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joy Wainaina — Resume</title>
+  <meta name="description" content="Resume for Your Name — Experience, Education, Skills, Contact" />
+  <style>
+    /* Simple, responsive resume styles */
+    :root{--accent:#2b6cb0;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;margin:0;background:#f7f7f7;color:#111}
+    .container{max-width:900px;margin:24px auto;background:#fff;padding:24px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    header{display:flex;gap:16px;align-items:center}
+    .avatar{flex:0 0 110px;height:110px;border-radius:10px;overflow:hidden;background:#eee}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .person h1{margin:0;font-size:1.4rem}
+    .person p{margin:6px 0;color:var(--muted)}
+    .contact{margin-top:12px}
+    .contact a{color:var(--accent);text-decoration:none}
+    nav.skills{margin-top:18px}
+    section{margin-top:18px}
+    h2{font-size:1rem;margin:0 0 8px 0;color:var(--accent)}
+    .job,.edu{padding:12px;border-left:3px solid #eee;margin-bottom:10px} /*the gray lines*/
+    .job time{display:block;color:var(--muted);font-size:0.9rem}
+    ul.skills-list{list-style:none;padding:0;margin:6px 0 0 0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.skills-list li{background:#f2f6fb;padding:6px 10px;border-radius:8px;font-size:0.9rem}
+    footer{margin-top:20px;color:var(--muted);font-size:0.9rem}
+    @media (max-width:640px){header{flex-direction:row} .person{flex:1}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <!-- Placeholder image; replace with your own photo if you have one -->
+        <img src="/images/prof photo.jpg" alt="Profile photo of Your Name">
+      </div>
+      <div class="person">
+        <h1>Joy Wainaina</h1>
+        <p class="tagline">Junior Frontend Developer / UI Designer</p>
+        <div class="contact" aria-label="Contact information">
+          <div>Email: <a href="mailto:you@example.com">joywain@gmail.com</a></div>
+          <div>Phone: <a href="tel:+254700000000">+254 712 050 000</a></div>
+          <div>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="profile">
+        <h2>Profile</h2>
+        <p>I am a computer science graduate from Dedan Kimathi University with a passion for UI/UX design, digital art, and frontend development. I create intuitive, visually appealing digital experiences and have a growing interest in AR emojis, game environments, and interactive design.</p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <article class="job">
+            <h3>Frontend Developer (Attachment) — Techsavanna Technologies</h3>
+            <time datetime="2024-01">Jan 2024 — Apr 2024</time>
+            <ul>
+                <li>Developed responsive user interfaces using HTML, CSS, and JavaScript to improve usability.</li>
+                <li>Collaborated with team members to design and implement UI features aligned with project requirements.</li>
+                <li>Assisted in testing and debugging to ensure cross-browser compatibility and performance.</li>
+            </ul>
+        </article>
+
+        <article class="job">
+            <h3>UI/UX Design Practice — Independent Projects</h3>
+            <time datetime="2023-01">Jan 2023 — May 2024</time>
+            <ul>
+                <li>Designed wireframes and prototypes for mobile and web applications using Figma.</li>
+                <li>Completed projects including a coffee app, mobile dictionary UI, and a self-study app concept.</li>
+                <li>Explored interaction design and microinteractions to enhance user feedback and engagement.</li>
+            </ul>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <article class="edu">
+          <h3>Dedan Kimathi University — BSc Computer Science</h3>
+          <time datetime="2020-01">2020 — 2024</time>
+          <p>Relevant coursework: Web Development, UI/UX, Databases.</p>
+        </article>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <nav class="skills" aria-label="Skills list">
+          <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS (Flexbox, Grid)</li>
+            <li>JavaScript</li>
+            <li>Figma</li>
+            <li>Procreate</li>
+          </ul>
+        </nav>
+      </section>
+
+      <section id="links">
+        <h2>Projects & Links</h2>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Portfolio (Figma link or GitHub Pages)</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Repl: My live resume</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Last updated: <time datetime="2025-08-11">August 10, 2025</time></p>
+    </footer>
+  </div>
+
+  <script>
+    // Small helper: ask user before navigating away if they haven't saved
+    let isSaved = true;
+    window.addEventListener('beforeunload', (e) => {
+      if (!isSaved) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    });
+  </script>
+</body>
+</html>
